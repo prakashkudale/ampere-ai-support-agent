@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#183d35">
+  <meta name="description" content="Ask Ampere product questions, check a demo account, or request human help.">
+  <title>Ampere Support</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%23183d35'/%3E%3Cpath d='M23 7 12 23h8l-3 11 12-18h-8z' fill='%23dbf3a9'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/chat.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar" aria-label="Support guide">
+    <a class="brand" href="/" aria-label="Ampere Support home"><span class="brand-icon">ϟ</span><span>ampere<span class="brand-dot">.</span></span></a>
+    <div class="workspace-label">YOUR SUPPORT SPACE</div>
+    <div class="nav-current"><span class="nav-icon">↗</span> Support assistant <span class="nav-dot"></span></div>
+    <section class="sidebar-intro"><p class="eyebrow">A LITTLE HELP GOES A LONG WAY</p><h2>Let’s get you<br>back to building.</h2><p>Answers from the docs.<br>A closer look when things go wrong.</p></section>
+    <section class="demo-section" aria-labelledby="demo-title"><div class="section-caption" id="demo-title">TRY A DEMO ACCOUNT <span>↙</span></div><p class="demo-hint">When asked for an email, choose one below.</p>
+      <button class="account" data-email="priya@example.com" type="button"><span class="account-avatar">P</span><span class="account-copy"><strong>Priya’s assistant</strong><span>priya@example.com</span></span><span class="account-status healthy" aria-label="Running"></span></button>
+      <button class="account" data-email="rahul@example.com" type="button"><span class="account-avatar muted">R</span><span class="account-copy"><strong>Rahul’s assistant</strong><span>rahul@example.com</span></span><span class="account-status offline" aria-label="Offline"></span></button>
+      <p class="demo-footnote"><span class="account-status healthy"></span> Running <span class="account-status offline"></span> Offline · missing API key</p>
+    </section>
+    <div class="sidebar-bottom"><span class="tiny-spark">✳</span><p>Built to help.<br><span>Honest when it needs a hand.</span></p></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div class="breadcrumb">Ampere <span>/</span> <strong>Support</strong></div><div class="header-actions"><span class="demo-badge"><span></span> Demo workspace</span><button id="new-chat" class="new-chat" type="button"><span aria-hidden="true">＋</span> New chat</button></div></header>
+    <div class="chat-layout">
+      <section class="chat-top"><div class="agent-heading"><div class="agent-avatar" aria-hidden="true">ϟ</div><div><h1>Ampere assistant</h1><p><span class="connection-dot" id="connection-dot"></span><span id="connection">Connecting…</span></p></div></div><span class="private-label"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="4.5" y="8.5" width="11" height="8" rx="2" stroke="currentColor"/><path d="M7 8V6a3 3 0 0 1 6 0v2" stroke="currentColor"/></svg>Local demo</span></section>
+      <div class="conversation-scroll" id="conversation-scroll">
+        <section class="welcome" id="welcome"><div class="welcome-mark" aria-hidden="true"><span>ϟ</span><i>✳</i></div><p class="eyebrow">GOOD QUESTIONS. CLEAR ANSWERS.</p><h2>What can we help<br>you with today?</h2><p class="welcome-description">From your first agent to a small hiccup.<br>Ask a question, and we’ll take it from here.</p>
+          <div class="suggestions"><button type="button" class="suggestion" data-prompt="How do I add an agent?"><span class="suggestion-icon">↗</span><strong>Get started</strong><span>How do I add an agent?</span><i aria-hidden="true">↗</i></button><button type="button" class="suggestion" data-prompt="My agent is broken."><span class="suggestion-icon">⌁</span><strong>Something’s not working</strong><span>Check my assistant</span><i aria-hidden="true">↗</i></button><button type="button" class="suggestion" data-prompt="I need a human."><span class="suggestion-icon">☏</span><strong>Talk it through</strong><span>Ask for human support</span><i aria-hidden="true">↗</i></button></div>
+        </section>
+        <div id="messages" class="messages" role="log" aria-label="Conversation" aria-live="polite" aria-relevant="additions"></div>
+        <div class="thinking" id="thinking" role="status" hidden><span class="mini-avatar" aria-hidden="true">ϟ</span><span class="thinking-dots"><i></i><i></i><i></i></span><span id="thinking-label">Looking into it…</span></div>
+      </div>
+      <div class="composer-area"><div class="error-notice" id="error-notice" role="alert" hidden><span id="error-text"></span><button type="button" id="retry">Try again</button></div><form id="chat-form" class="composer"><label class="sr-only" for="message">Your message</label><textarea id="message" rows="1" maxlength="4000" placeholder="Ask a question or tell us what’s going on…" autocomplete="off"></textarea><div class="composer-bottom"><span>Enter to send <span class="separator">·</span> Shift + Enter for a new line</span><span id="character-count" hidden></span><button id="send" type="submit" aria-label="Send message" disabled><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 18V6m-5 5 5-5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></form><p class="disclaimer">Demo accounts only. Human handoffs are simulated. Never share API keys.</p></div>
+    </div>
+    <footer class="page-footer"><span>POWERED BY AMPERE</span><span>Made for a little less friction <span aria-hidden="true">✳</span></span></footer>
+  </main>
+</body>
+</html>

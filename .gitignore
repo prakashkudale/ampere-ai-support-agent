@@ -1,0 +1,19 @@
+.env
+.env.*
+!.env.example
+.venv/
+.tmp/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+data/
+*.db
+*.sqlite*
+logs/
+outputs/
+PLAN.md
+# Local workbook audit helpers require the supplied private test files.
+scripts/test_workbook.py
+scripts/verify_workbook_sources.py
+
